@@ -1,0 +1,32 @@
+---
+title: "Entorno de R"
+subtitle: "Elementos básicos para el uso de R"
+author: "Andres M. Palacio"
+output: pdf_document
+fig_caption: yes
+latex_engine: xelatex
+number_sections: yes
+toc: yes
+date: '\today'
+linkcolor: orange
+urlcolor: orange
+---
+
+#Actualización
+
+Para actualizar R es posible utilizar la siguiente opción
+
+```{r, Actualización de R, eval=FALSE}
+install.packages("installr", dependencies = TRUE)
+library(installr)
+updateR()
+```
+
+Para comprobar la versión de R instalada actualmente utilizamos la siguiente opción:
+
+```{r}
+R.version
+```
+
+
+#Instalación de paquetes
