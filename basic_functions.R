@@ -3,24 +3,10 @@
 
 #Paquetes a usar
 
-  library(readr)
-  library(dplyr)
-  library(tidyverse)
+library(pacman)
+p_load(readr, dplyr, tidyverse,stargazer)
 
-  #Base de datos de práctica
-  
-  #Salud
-  salud <- read_csv("Salud.csv")
-  
-  #Nacimientos
-  nacimientos2018 <- read_csv("~/Big_Data/Datasets_personal/DANE_nacimientos/nac2018.csv")
-
-  #Cultura
-  cultura2020 <- read_delim("~/Big_Data/Datasets_personal/DANE_cultura/encuesta_consumo_cultural_2020.csv", 
-                            delim = ";", escape_double = FALSE, trim_ws = TRUE)
-  
-
-#Pasos iniciales
+#Básicos
   
   a <- c(1,2,3)
   b <- c("x","y","z")
@@ -32,4 +18,18 @@
   setwd("C:/Users/User/Documents/Big_Data/GitHub/Codes_Structure")
   save(w, file = "data_frame_test.RData")
   
-    
+#Directorios
+  
+  #Fijar un directorio
+  setwd("C:/Users/User/Documents/Big_Data/GitHub/Codes_Structure")
+  
+  #Obtener la ruta del directorio actual
+  getwd()
+  
+#Manipulación de la BD
+  
+  dim(salud)
+  summary(salud$P6127) #Estado de salud
+  summary(salud$P6100) #Regimen de afiliacion
+  
+  
